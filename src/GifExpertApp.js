@@ -5,7 +5,10 @@ export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch", "Samurai X", "Dragon Ball"])
   // Change the state of component
   const handleAdd = () => {
-    setCategories([...categories, "HunterXHunter"]) // Elements in categories plus new
+    // Elements in categories plus new
+    // setCategories([...categories, "HunterXHunter"])
+    // Other way concatening with callbacks
+    setCategories(cats => [...cats, "HunterXHunter"])
   }
   return (
     <>
